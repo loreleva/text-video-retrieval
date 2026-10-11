@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text_video_retrieval"
+version = "0.1.0"
+description = "A program to retrieve video from text queries."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "PySide6",
+    "torch>=2.4.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["text_video_retrieval", "text_video_retrieval.*"]
+namespaces = false
