@@ -47,7 +47,7 @@ Replace `/absolute/path/to/videos` with an existing video directory on your host
 docker run --rm -d --gpus all \
     --env DISPLAY="$DISPLAY" \
     --mount type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix \
-    --mount type=volume,source=database-data,target=/text_video_retrieval/text_video_retrieval/data \
+    --mount type=volume,source=app-data,target=/app-data \
     --mount "type=bind,source=/absolute/path/to/videos,target=/workspace/videos,readonly" \
     --name text-video-retrieval \
     loreleva/text-video-retrieval
